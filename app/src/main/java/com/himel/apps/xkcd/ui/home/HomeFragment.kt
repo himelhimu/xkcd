@@ -45,7 +45,10 @@ class HomeFragment : Fragment() {
 
     private fun showData(it: Comic) {
         binding.altText.text = it.alt
-        Glide.with(this).load(it.img).into(binding.img)
+        binding.webview.loadUrl(it.img)
+        binding.webview.settings.builtInZoomControls = true
+        binding.webview.settings.displayZoomControls = true
+        //Glide.with(this).load(it.img).into(binding.img)
     }
 
     override fun onDestroyView() {
