@@ -47,6 +47,7 @@ class HomeFragment : Fragment() {
         binding.altText.text = it.alt
         binding.webview.loadUrl(it.img)
         binding.webview.settings.builtInZoomControls = true
+        binding.webview.zoomOut()
         binding.webview.settings.displayZoomControls = true
         //Glide.with(this).load(it.img).into(binding.img)
     }
